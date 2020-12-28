@@ -3,8 +3,16 @@ const express = require('express');
 const controller = require('./controller');
 const router = express.Router();
 
+router.get('/', function(req, res) {
+    res.sendFile('index.html', { root: './public/' });
+});
+
 router.get('/ganadores', function (req, res){
     res.sendFile('ganadores.html', { root: './public/' });
+});
+
+router.post('/message', function (req, res){
+    res.send('Mensaje añadido');
     //controller.winners();
     // .then((fullMessage) => {
     //     response.success(req, res, fullMessage, 201);
@@ -12,10 +20,6 @@ router.get('/ganadores', function (req, res){
     // .catch(e => {
     //     response.error(req, res, 'Información invalida', 400, 'recarga la pagina porfavor')
     // });
-});
-
-router.post('/message', function (req, res){
-    res.send('Mensaje añadido');
 });
 
 module.exports = router;
