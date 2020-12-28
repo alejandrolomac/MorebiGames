@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-var app = express(); 
+const app = express(); 
+const port = process.env.PORT || 5000
 app.use(router);
 
 router.get('/message', function (req, res){
@@ -14,4 +15,4 @@ router.post('/message', function (req, res){
 
 app.use('/', express.static('public'));
 
-app.listen(3000);
+app.listen(port);
