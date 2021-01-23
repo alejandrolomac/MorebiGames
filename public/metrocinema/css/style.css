@@ -1,0 +1,113 @@
+.navbar
+{
+  background: #873887;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.logo-meyko
+{
+  display: block;
+  width: 40%;
+  height: auto;
+  margin: 0px auto;
+}
+
+.ctrl {
+  margin-bottom: 1.6rem;  
+}
+
+.header {
+  color: #555;
+  height: 100%;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.removeInput {
+  font-size: 36px;
+  color: #873887;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.text-body-1 {
+  font-size: 15px;
+  line-height: 20px;
+  padding-top: 12px;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0;
+}
+
+.text-headline {
+  font-size: 24px;
+  line-height: 32px;
+  padding-top: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0;
+}
+
+/* vuejs transition */
+.expand-transition {
+  transition: all .5s ease;
+  padding: 10px;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+/* Material Design code below */
+.raised-button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.25s ease-out;
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #873887;
+  color: #FAFAFA;
+  border: 2px solid #873887;
+}
+.raised-button:hover, .raised-button:focus {
+  background: #441944;
+  color: #FFF;
+}
+
+input:focus 		{ outline:none; }
+
+.searchForm {
+  margin-bottom: 2.6rem;
+  position: relative;  
+  text-align: center;
+}
+
+.searchForm input[type="text"] {
+  border: 2px solid #e0e0e0;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.25s ease-out;
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.searchForm input[type="text"]:focus {
+  border: 2px solid #873887;
+  position: relative;
+}
