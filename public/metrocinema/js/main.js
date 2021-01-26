@@ -21,7 +21,8 @@ ref.once("value").then(function(snapshot) {
         var premio = childSnapshot.val().userPremio;
         var identidad = childSnapshot.val().userIdentidad;
         var status = childSnapshot.val().userStatus;
+        var city = childSnapshot.val().userCity;
         document.getElementById('winners').innerHTML += 
-        '<div class="col"><div class="card mb-3"><div class="card-body"><div class="card-text"><ul class="list-group list-group-flush"><li class="list-group-item"><h4 class="card-title" style="color: #873887;">' + code + '</h4></li><li class="list-group-item"><b>Nombre: </b>' + firstName + '</li><li class="list-group-item"><b>N° de Identidad: </b>' + identidad + '</li><li class="list-group-item"><b>Teléfono: </b>' + phone + '</li><li class="list-group-item"><b>Premio: </b>' + premio + '</li><li class="list-group-item"><b>Estado: </b>' + status + '</li></ul></div></div></div></div>';
+        '<div class="col"><div class="card mb-3"><div class="card-body"><div class="card-text"><ul class="list-group list-group-flush"><li class="list-group-item"><h4 class="card-title" style="color: #873887;">' + code + '</h4></li><li class="list-group-item"><b>Nombre: </b>' + firstName + '</li><li class="list-group-item"><b>N° de Identidad: </b>' + identidad + '</li><li class="list-group-item"><b>Teléfono: </b>' + phone + '</li><li class="list-group-item"><b>Teléfono: </b>' + city + '<li class="list-group-item"><b>Premio: </b>' + premio + '</li><li class="list-group-item"><b>Estado: </b>' + status + '</li></ul></div></div></div></div>';
     });
 });
