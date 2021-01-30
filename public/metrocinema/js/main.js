@@ -26,3 +26,10 @@ ref.once("value").then(function(snapshot) {
         '<div class="col"><div class="card mb-3"><div class="card-body"><div class="card-text"><ul class="list-group list-group-flush"><li class="list-group-item"><h4 class="card-title" style="color: #873887;">' + code + '</h4></li><li class="list-group-item"><b>Nombre: </b>' + firstName + '</li><li class="list-group-item"><b>N° de Identidad: </b>' + identidad + '</li><li class="list-group-item"><b>Teléfono: </b>' + phone + '</li><li class="list-group-item"><b>Teléfono: </b>' + city + '<li class="list-group-item"><b>Premio: </b>' + premio + '</li><li class="list-group-item"><b>Estado: </b>' + status + '</li></ul></div></div></div></div>';
     });
 });
+
+var refe = firebase.database().ref("winners");
+    refe.once("value")
+    .then(function(snapshot) {
+        document.getElementById('winCounter').innerHTML += ' - ' + snapshot.numChildren();
+});
+
