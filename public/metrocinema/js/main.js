@@ -31,5 +31,73 @@ var refe = firebase.database().ref("winners");
     refe.once("value")
     .then(function(snapshot) {
         document.getElementById('winCounter').innerHTML += ' - ' + snapshot.numChildren();
+        document.getElementById('countwin').innerHTML = snapshot.numChildren();
 });
 
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userStatus").equalTo('Reclamado').once("value")
+    .then(function(snapshot) {
+        document.getElementById('recwin').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userStatus").equalTo('No Reclamado').once("value")
+    .then(function(snapshot) {
+        document.getElementById('recno').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userPremio").equalTo('2x1').once("value")
+    .then(function(snapshot) {
+        document.getElementById('windos').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userPremio").equalTo('Pase Doble').once("value")
+    .then(function(snapshot) {
+        document.getElementById('windoble').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userPremio").equalTo('Un Pase').once("value")
+    .then(function(snapshot) {
+        document.getElementById('winpase').innerHTML = snapshot.numChildren();
+});
+
+//contador departamentos
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userCity").equalTo('Tegucigalpa').once("value")
+    .then(function(snapshot) {
+        document.getElementById('winteg').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userCity").equalTo('San Pedro Sula').once("value")
+    .then(function(snapshot) {
+        document.getElementById('winsps').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userCity").equalTo('El Progreso').once("value")
+    .then(function(snapshot) {
+        document.getElementById('winpro').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userCity").equalTo('Puerto Cortes').once("value")
+    .then(function(snapshot) {
+        document.getElementById('winpuerto').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userCity").equalTo('Santa Rosa').once("value")
+    .then(function(snapshot) {
+        document.getElementById('winsanta').innerHTML = snapshot.numChildren();
+});
+
+var refa = firebase.database().ref("winners");
+    refa.orderByChild("userCity").equalTo('Choloma').once("value")
+    .then(function(snapshot) {
+        document.getElementById('wincholoma').innerHTML = snapshot.numChildren();
+});
